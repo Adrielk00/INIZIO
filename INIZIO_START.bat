@@ -2,7 +2,7 @@
 ::                                                                        INFO                                                                     ::
 ::\\---------------------------------------------------------------------------------------------------------------------------------------------//::
 :: Name: INIZIO V4.0                                                                                                                               ::
-:: Info: BATCH file for organize /// Last Update 26/12/23                                                                                          ::
+:: Info: BATCH file for organize /// Last Update 07/04/23                                                                                          ::
 :: Autor: Adriel Kevin Galati                                                                                                                      ::
 :: For: SP Productions                                                                                                                             ::
 :: Last Test: Windows 10 PRO - Version: 21H1 - Compilation: 19044.1387                                                                             ::
@@ -47,9 +47,9 @@ copy /Y "INIZIO\00-Essentials\00-Programs\00-sppcmd\backupconfig\user-ConEmu.xml
 :: Configuracion ConEmu Base
 copy /Y "INIZIO\00-Essentials\00-Programs\00-sppcmd\backupconfig\ConEmu.xml" "INIZIO\00-Essentials\00-Programs\00-sppcmd\vendor\conemu-maximus5" >nul
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::// INVOCACION DE Stop_Protect - INICIO-\\\ ◄◄◄◄ 00                       <------ ESTA FUNCION SIRVE PARA CERRAR LOS PROGRAMAS EN SEGUNDO PLANO QUE EJECUTA LA TERMINAL CUANDO LA TERMINAL SE CIERRA DE FORMA INESPERADA O FORZOSAMENTE.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::// INVOCACION DE Stop_Protect - INICIO-\\\ ◄◄◄◄ 00                       <------ "Stop_Protect.bat" execute "Stop_Protect.ps1" // CERRAR LOS PROGRAMAS EN SEGUNDO PLANO QUE EJECUTA LA TERMINAL CUANDO LA TERMINAL PRINCIPAL SE CIERRE DE FORMA INESPERADA O FORZOSAMENTE. (SPPClicker.exe y fmedia.exe)
 start /D "INIZIO\00-Essentials\00-Programs\03-Sound\" /min Stop_Protect.bat > nul
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::// INVOCACION EN COMMANDER - INICIO-\\\ ◄◄◄◄ 00                          <------ EN EL COMANDO DE ABAJO EL CODIGO "/X" ESTABLECE LA RUTA DONDE SE ENCUENTRA EL .BAT COMO EL ESPACIO DE TRABAJO DE SPPCMD.EXE. Caso contrario no va a funcionar correctamente el script base.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::// INVOCACION EN COMMANDER - INICIO-\\\ ◄◄◄◄ 00                          <------ "/X" ESTABLECE LA RUTA DONDE SE ENCUENTRA EL .BAT COMO EL ESPACIO DE TRABAJO DE SPPCMD.EXE. Caso contrario no funcionaria correctamente el script base.
 "INIZIO\00-Essentials\00-Programs\00-sppcmd\SPPCMD.exe" /x "/cmd \"INIZIO\00-Essentials\00-Programs\01-Inizio\inizio.bat"
 
 :://---------------------------------------------------------------------------------------------------------------------------------------------\\::
